@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.core.contenttype.contentTypes">
+      <content-type
+            file-extensions="logo"
+            id="ynn.eclipse.mylogo.contentTypes.logoscript"
+            name="LOGO Script"
+            priority="normal">
+      </content-type>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="ynn.eclipse.mylogo.editors.LogoEditor"
+            default="true"
+            icon="icons/myLOGO16.png"
+            id="ynn.eclipse.mylogo.editors.logoEditor"
+            name="LOGO Editor">
+         <contentTypeBinding
+               contentTypeId="ynn.eclipse.mylogo.contentTypes.logoscript">
+         </contentTypeBinding>
+      </editor>
+      <editor
+            class="ynn.eclipse.mylogo.editors.LogoScriptEditor"
+            contributorClass="ynn.eclipse.mylogo.editors.LogoScriptEditorActionContributor"
+            icon="icons/myLOGO16.png"
+            id="ynn.eclipse.mylogo.editors.logoScriptEditor"
+            name="LOGO Script Editor">
+         <contentTypeBinding
+               contentTypeId="ynn.eclipse.mylogo.contentTypes.logoscript">
+         </contentTypeBinding>
+      </editor>
+   </extension>
+   <extension
+         id="logoBuilder"
+         name="LOGO Project Builder"
+         point="org.eclipse.core.resources.builders">
+      <builder
+            hasNature="true">
+         <run
+               class="ynn.eclipse.mylogo.builder.LogoBuilder">
+         </run>
+      </builder>
+   </extension>
+   <extension
+         id="logoNature"
+         name="LOGO Project Nature"
+         point="org.eclipse.core.resources.natures">
+      <runtime>
+         <run
+               class="ynn.eclipse.mylogo.builder.LogoNature">
+         </run>
+      </runtime>
+      <builder
+            id="ynn.eclipse.mylogo.logoBuilder">
+      </builder>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="popup:org.eclipse.ui.projectConfigure?after=additions">
+         <command
+               commandId="ynn.eclipse.mylogo.addRemoveLogoNature"
+               label="Disable LOGO builder"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="selection">
+                  <count
+                        value="1">
+                  </count>
+                  <iterate>
+                     <and>
+                        <instanceof
+                              value="org.eclipse.core.resources.IProject">
+                        </instanceof>
+                        <test
+                              property="org.eclipse.core.resources.projectNature"
+                              value="ynn.eclipse.mylogo.logoNature">
+                        </test>
+                     </and>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="ynn.eclipse.mylogo.addRemoveLogoNature"
+               label="Enable LOGO builder"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="selection">
+                  <count
+                        value="1">
+                  </count>
+                  <iterate>
+                     <and>
+                        <instanceof
+                              value="org.eclipse.core.resources.IProject">
+                        </instanceof>
+                        <not>
+                           <test
+                                 property="org.eclipse.core.resources.projectNature"
+                                 value="ynn.eclipse.mylogo.logoNature">
+                           </test>
+                        </not>
+                     </and>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         id="logoProblem"
+         name="LOGO Problem"
+         point="org.eclipse.core.resources.markers">
+      <super
+            type="org.eclipse.core.resources.problemmarker">
+      </super>
+      <persistent
+            value="true">
+      </persistent>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="ynn.eclipse.mylogo.commands.logocategory"
+            name="LOGO">
+      </category>
+      <command
+            categoryId="ynn.eclipse.mylogo.commands.logocategory"
+            defaultHandler="ynn.eclipse.mylogo.builder.AddRemoveLogoNatureHandler"
+            id="ynn.eclipse.mylogo.addRemoveLogoNature"
+            name="Add/RemoveLOGO Project Nature">
+      </command>
+   </extension>
+
+</plugin>
