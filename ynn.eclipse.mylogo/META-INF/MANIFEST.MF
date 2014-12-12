@@ -14,5 +14,5 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.ui.views
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
-Bundle-ClassPath: lib/myLOGO.jar,
+Bundle-ClassPath: lib/mylogo-core.jar,
  .
