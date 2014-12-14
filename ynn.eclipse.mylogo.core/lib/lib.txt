@@ -1,0 +1,2 @@
+Expected JAR files in this lib directory:
+mylogo-core.jar (from jcenter: ynn.mylogo:mylogo-core:1.0.1)

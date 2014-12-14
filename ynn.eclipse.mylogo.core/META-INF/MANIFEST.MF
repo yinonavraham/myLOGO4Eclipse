@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: myLOGO-Core
+Bundle-SymbolicName: ynn.eclipse.mylogo.core
+Bundle-Version: 1.0.1.qualifier
+Bundle-ClassPath: lib/mylogo-core.jar,
+ .
+Bundle-Vendor: Yinon Avraham
+Export-Package: ynn.mylogo.common,
+ ynn.mylogo.model,
+ ynn.mylogo.model.designtime,
+ ynn.mylogo.model.designtime.impl,
+ ynn.mylogo.model.designtime.predefined.impl,
+ ynn.mylogo.model.runtime,
+ ynn.mylogo.model.runtime.impl,
+ ynn.mylogo.model.runtime.predefined,
+ ynn.mylogo.model.runtime.predefined.impl,
+ ynn.mylogo.parser,
+ ynn.mylogo.parser.ast,
+ ynn.mylogo.ui,
+ ynn.mylogo.ui.images,
+ ynn.mylogo.ui.swt
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: org.eclipse.swt;bundle-version="3.103.1"
