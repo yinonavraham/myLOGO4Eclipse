@@ -1,4 +1,4 @@
-package ynn.eclipse.mylogo.editors;
+package ynn.eclipse.mylogo.ui.editors;
 
 import java.util.ResourceBundle;
 
@@ -20,7 +20,7 @@ import org.eclipse.ui.texteditor.ContentAssistAction;
 import org.eclipse.ui.texteditor.ITextEditorActionDefinitionIds;
 import org.eclipse.ui.views.contentoutline.IContentOutlinePage;
 
-import ynn.eclipse.mylogo.views.LogoScriptOutlinePage;
+import ynn.eclipse.mylogo.ui.views.LogoScriptOutlinePage;
 import ynn.mylogo.model.ActionsRegistry;
 import ynn.mylogo.parser.LogoParser;
 import ynn.mylogo.parser.LogoParser.ParserResult;
@@ -62,7 +62,7 @@ public class LogoScriptEditor extends AbstractDecoratedTextEditor {
 	@Override
 	protected void createActions() {
 		super.createActions();
-		ResourceBundle resourceBundle = ResourceBundle.getBundle("ynn.eclipse.mylogo.res.contentAssist"); 
+		ResourceBundle resourceBundle = ResourceBundle.getBundle("ynn.eclipse.mylogo.ui.res.contentAssist"); 
 		Action action = new ContentAssistAction(resourceBundle, "ContentAssistProposal.", this); 
 		String id = ITextEditorActionDefinitionIds.CONTENT_ASSIST_PROPOSALS;
 		action.setActionDefinitionId(id);

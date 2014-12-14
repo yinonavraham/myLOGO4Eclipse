@@ -13,20 +13,20 @@
    <extension
          point="org.eclipse.ui.editors">
       <editor
-            class="ynn.eclipse.mylogo.editors.LogoEditor"
+            class="ynn.eclipse.mylogo.ui.editors.LogoEditor"
             default="true"
             icon="icons/myLOGO16.png"
-            id="ynn.eclipse.mylogo.editors.logoEditor"
+            id="ynn.eclipse.mylogo.ui.editors.logoEditor"
             name="LOGO Editor">
          <contentTypeBinding
                contentTypeId="ynn.eclipse.mylogo.contentTypes.logoscript">
          </contentTypeBinding>
       </editor>
       <editor
-            class="ynn.eclipse.mylogo.editors.LogoScriptEditor"
-            contributorClass="ynn.eclipse.mylogo.editors.LogoScriptEditorActionContributor"
+            class="ynn.eclipse.mylogo.ui.editors.LogoScriptEditor"
+            contributorClass="ynn.eclipse.mylogo.ui.editors.LogoScriptEditorActionContributor"
             icon="icons/myLOGO16.png"
-            id="ynn.eclipse.mylogo.editors.logoScriptEditor"
+            id="ynn.eclipse.mylogo.ui.editors.logoScriptEditor"
             name="LOGO Script Editor">
          <contentTypeBinding
                contentTypeId="ynn.eclipse.mylogo.contentTypes.logoscript">
@@ -54,7 +54,7 @@
          </run>
       </runtime>
       <builder
-            id="ynn.eclipse.mylogo.logoBuilder">
+            id="ynn.eclipse.mylogo.ui.logoBuilder">
       </builder>
    </extension>
    <extension
@@ -62,7 +62,7 @@
       <menuContribution
             locationURI="popup:org.eclipse.ui.projectConfigure?after=additions">
          <command
-               commandId="ynn.eclipse.mylogo.addRemoveLogoNature"
+               commandId="ynn.eclipse.mylogo.ui.addRemoveLogoNature"
                label="Disable LOGO builder"
                style="push">
             <visibleWhen
@@ -79,7 +79,7 @@
                         </instanceof>
                         <test
                               property="org.eclipse.core.resources.projectNature"
-                              value="ynn.eclipse.mylogo.logoNature">
+                              value="ynn.eclipse.mylogo.ui.logoNature">
                         </test>
                      </and>
                   </iterate>
@@ -87,7 +87,7 @@
             </visibleWhen>
          </command>
          <command
-               commandId="ynn.eclipse.mylogo.addRemoveLogoNature"
+               commandId="ynn.eclipse.mylogo.ui.addRemoveLogoNature"
                label="Enable LOGO builder"
                style="push">
             <visibleWhen
@@ -105,7 +105,7 @@
                         <not>
                            <test
                                  property="org.eclipse.core.resources.projectNature"
-                                 value="ynn.eclipse.mylogo.logoNature">
+                                 value="ynn.eclipse.mylogo.ui.logoNature">
                            </test>
                         </not>
                      </and>
@@ -129,13 +129,13 @@
    <extension
          point="org.eclipse.ui.commands">
       <category
-            id="ynn.eclipse.mylogo.commands.logocategory"
+            id="ynn.eclipse.mylogo.ui.commands.logocategory"
             name="LOGO">
       </category>
       <command
-            categoryId="ynn.eclipse.mylogo.commands.logocategory"
-            defaultHandler="ynn.eclipse.mylogo.builder.AddRemoveLogoNatureHandler"
-            id="ynn.eclipse.mylogo.addRemoveLogoNature"
+            categoryId="ynn.eclipse.mylogo.ui.commands.logocategory"
+            defaultHandler="ynn.eclipse.mylogo.ui.handlers.AddRemoveLogoNatureHandler"
+            id="ynn.eclipse.mylogo.ui.addRemoveLogoNature"
             name="Add/RemoveLOGO Project Nature">
       </command>
    </extension>

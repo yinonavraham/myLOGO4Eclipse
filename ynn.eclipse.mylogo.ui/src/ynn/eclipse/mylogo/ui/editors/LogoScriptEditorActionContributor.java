@@ -1,4 +1,4 @@
-package ynn.eclipse.mylogo.editors;
+package ynn.eclipse.mylogo.ui.editors;
 
 import org.eclipse.ui.IActionBars;
 import org.eclipse.ui.IEditorPart;

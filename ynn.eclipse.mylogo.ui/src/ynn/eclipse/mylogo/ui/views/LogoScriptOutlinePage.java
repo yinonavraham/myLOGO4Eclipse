@@ -1,4 +1,4 @@
-package ynn.eclipse.mylogo.views;
+package ynn.eclipse.mylogo.ui.views;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +11,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.views.contentoutline.ContentOutlinePage;
 
-import ynn.eclipse.mylogo.util.ASTVisitorAdapter;
+import ynn.eclipse.mylogo.ui.util.ASTVisitorAdapter;
 import ynn.mylogo.parser.ast.ASTVisitable;
 import ynn.mylogo.parser.ast.ASTVisitor;
 import ynn.mylogo.parser.ast.ActionCallStatement;

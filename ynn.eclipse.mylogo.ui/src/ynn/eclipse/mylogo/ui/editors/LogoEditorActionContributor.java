@@ -1,4 +1,4 @@
-package ynn.eclipse.mylogo.editors;
+package ynn.eclipse.mylogo.ui.editors;
 
 import org.eclipse.jface.action.*;
 import org.eclipse.jface.dialogs.MessageDialog;

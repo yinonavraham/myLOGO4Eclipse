@@ -28,7 +28,7 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 
 import ynn.eclipse.mylogo.markers.MarkersHelper;
-import ynn.eclipse.mylogo.util.Util;
+import ynn.eclipse.mylogo.ui.util.Util;
 import ynn.mylogo.model.ActionsRegistry;
 import ynn.mylogo.model.runtime.Action;
 import ynn.mylogo.parser.LogoParser;
@@ -38,7 +38,7 @@ import ynn.mylogo.ui.swt.TurtleCanvas;
 
 public class LogoBuilder extends IncrementalProjectBuilder {
 
-	public static final String BUILDER_ID = "ynn.eclipse.mylogo.logoBuilder";
+	public static final String BUILDER_ID = "ynn.eclipse.mylogo.ui.logoBuilder";
 
 	class LogoDeltaVisitor implements IResourceDeltaVisitor {
 		

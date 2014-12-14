@@ -1,4 +1,4 @@
-package ynn.eclipse.mylogo.editors;
+package ynn.eclipse.mylogo.ui.editors;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -55,7 +55,7 @@ import org.eclipse.swt.graphics.RGB;
 import org.eclipse.ui.IEditorPart;
 
 import ynn.eclipse.mylogo.markers.MarkersHelper;
-import ynn.eclipse.mylogo.util.ASTVisitorAdapter;
+import ynn.eclipse.mylogo.ui.util.ASTVisitorAdapter;
 import ynn.mylogo.model.ActionsRegistry;
 import ynn.mylogo.model.designtime.ActionDefinition;
 import ynn.mylogo.model.designtime.ArgumentDefinition;

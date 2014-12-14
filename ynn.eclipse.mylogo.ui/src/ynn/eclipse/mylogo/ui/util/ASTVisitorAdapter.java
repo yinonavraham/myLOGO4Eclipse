@@ -1,4 +1,4 @@
-package ynn.eclipse.mylogo.util;
+package ynn.eclipse.mylogo.ui.util;
 
 import ynn.mylogo.parser.ast.ASTVisitor;
 import ynn.mylogo.parser.ast.AbstractStatement;

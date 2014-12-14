@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: myLOGO
-Bundle-SymbolicName: ynn.eclipse.mylogo;singleton:=true
+Bundle-SymbolicName: ynn.eclipse.mylogo.ui;singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Bundle-Activator: ynn.eclipse.mylogo.internal.Activator
+Bundle-Activator: ynn.eclipse.mylogo.ui.internal.Activator
 Bundle-Vendor: YA
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,

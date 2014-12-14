@@ -1,4 +1,4 @@
-package ynn.eclipse.mylogo.editors;
+package ynn.eclipse.mylogo.ui.editors;
 
 
 import java.util.List;

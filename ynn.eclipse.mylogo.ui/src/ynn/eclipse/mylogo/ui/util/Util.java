@@ -1,4 +1,4 @@
-package ynn.eclipse.mylogo.util;
+package ynn.eclipse.mylogo.ui.util;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

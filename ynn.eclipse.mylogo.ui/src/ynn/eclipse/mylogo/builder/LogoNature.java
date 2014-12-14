@@ -11,7 +11,7 @@ public class LogoNature implements IProjectNature {
 	/**
 	 * ID of this project nature
 	 */
-	public static final String NATURE_ID = "ynn.eclipse.mylogo.logoNature";
+	public static final String NATURE_ID = "ynn.eclipse.mylogo.ui.logoNature";
 
 	private IProject project;
 

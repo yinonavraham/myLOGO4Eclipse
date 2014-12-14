@@ -1,4 +1,4 @@
-package ynn.eclipse.mylogo.internal;
+package ynn.eclipse.mylogo.ui.internal;
 
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
