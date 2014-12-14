@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/ynn.eclipse.mylogo_feature_1.0.0.201412150004.jar" id="ynn.eclipse.mylogo_feature" version="1.0.0.201412150004">
+      <category name="ynn.eclipse.mylogo.category"/>
+   </feature>
+   <category-def name="ynn.eclipse.mylogo.category" label="myLOGO4Eclipse"/>
+</site>
